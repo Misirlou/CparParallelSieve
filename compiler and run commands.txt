@@ -1,0 +1,15 @@
+gcc -O2 -o single single.c -lm
+./single 
+./single [number] [blocksize]
+./single b
+
+gcc -O2 -fopenmp -o omp omp.c -lm
+./omp  
+./omp [cores] [number] [blocksize]
+./omp b
+
+
+mpicc -O2 -o mpi mpi.c -lm
+mpirun mpi <number> <blocksize> -ni <number of processes>
+
+
